@@ -1,24 +1,20 @@
-[tool.poetry]
+[project]
 name = "radiko-recorder"
-version = "0.2.0"
-description = ""
-authors = ["ARM0930 <72128692+XXXFQ@users.noreply.github.com>"]
+version = "0.1.0"
+description = "Add your description here"
 readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "beautifulsoup4>=4.13.3",
+    "colorlog>=6.9.0",
+    "ffmpeg-python>=0.2.0",
+    "lxml>=5.3.0",
+    "python-dotenv>=1.0.1",
+    "requests>=2.32.3",
+]
 
-[tool.poetry.dependencies]
-python = ">=3.11,<3.14"
-beautifulsoup4 = "^4.12.3"
-colorlog = "^6.9.0"
-ffmpeg-python = "^0.2.0"
-requests = "^2.32.3"
-python-dotenv = "^1.0.1"
-lxml = "^5.3.0"
-poetry = "^1.8.4"
-
-[tool.poetry.group.dev.dependencies]
-pyinstaller = "^6.11.0"
-ipykernel = "^6.29.5"
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29.5",
+    "pyinstaller>=6.12.0",
+]

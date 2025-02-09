@@ -28,7 +28,7 @@ def read_pyproject_version(pyproject_path="pyproject.toml") -> str:
     '''
     with open(pyproject_path, "r") as f:
         pyproject = toml.load(f)
-    return pyproject["tool"]["poetry"]["version"]
+    return pyproject["project"]["version"]
 
 def write_version_file(version, output_path="radiko_recorder/version.py"):
     '''

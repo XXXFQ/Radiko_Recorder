@@ -1,6 +1,6 @@
 [project]
 name = "radiko-recorder"
-version = "0.1.0"
+version = "0.2.1"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.11"
@@ -17,4 +17,5 @@ dependencies = [
 dev = [
     "ipykernel>=6.29.5",
     "pyinstaller>=6.12.0",
+    "toml>=0.10.2",
 ]

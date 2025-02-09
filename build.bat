@@ -16,7 +16,7 @@ if "%UPX_DIR%"=="" (
 echo UPX Directory: %UPX_DIR%
 
 :: 仮想環境でPyInstallerを実行
-poetry run pyinstaller --onefile --name radiko-recorder -c --hidden-import=radiko_recorder --upx-dir "%UPX_DIR%" -p ./radiko_recorder radiko_recorder/__main__.py
+uv run pyinstaller --onefile --name radiko-recorder -c --hidden-import=radiko_recorder --upx-dir "%UPX_DIR%" -p ./radiko_recorder radiko_recorder/__main__.py
 
 if %ERRORLEVEL% NEQ 0 (
     echo Build failed!

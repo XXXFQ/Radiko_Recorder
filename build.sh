@@ -16,8 +16,8 @@ fi
 UPX_DIR=$(dirname "$UPX_PATH")
 echo "UPX Directory: $UPX_DIR"
 
-# Poetry仮想環境でPyInstallerを実行
-poetry run pyinstaller --onefile --name radiko-recorder -c --hidden-import=radiko_recorder --upx-dir "$UPX_DIR" -p ./radiko_recorder radiko_recorder/__main__.py
+# 仮想環境でPyInstallerを実行
+uv run pyinstaller --onefile --name radiko-recorder -c --hidden-import=radiko_recorder --upx-dir "$UPX_DIR" -p ./radiko_recorder radiko_recorder/__main__.py
 
 # ビルドが成功したかを確認
 if [ $? -ne 0 ]; then

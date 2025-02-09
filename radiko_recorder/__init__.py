@@ -9,7 +9,6 @@ import re
 from datetime import datetime
 from pathlib import Path
 
-from .version import __version__
 from .recorder import RadikoPlayer
 from .config import RADIKO_AREA_ID
 
